@@ -1,0 +1,1 @@
+KERNEL=="ttyUSB*", ACTION=="add|change", PROGRAM="/home/maruen/Local/bin/port_manager.php %k", SYMLINK+="%c"
