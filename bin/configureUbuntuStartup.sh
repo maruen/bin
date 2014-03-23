@@ -1,0 +1,1 @@
+sudo sysv-rc-conf
