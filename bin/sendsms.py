@@ -8,7 +8,7 @@ import re
 # Asterisk manager credentials
 HOST = '127.0.0.1'
 USER = 'admin'
-PASS = 'tnt.@cm3'
+PASS = '13shua'
  
 CMD = "dongle sms %s %s %s"
  
