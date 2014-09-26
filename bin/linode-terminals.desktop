@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Linode Terminals
+Exec=/home/desenv/Local/bin/linodeTerms.sh
+Icon=desktop
+Type=Application
+Terminal=false
