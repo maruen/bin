@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Terminal
+Exec=gnome-terminal --with-tab-profile=TERMINAL
+Icon=/home/desenv/Pictures/terminal1.jpg
+Type=Application
+Terminal=false
+Actions=GoLive Terminals;Linode Terminals
+
+[Desktop Action GoLive Terminals]
+Name=GoLive-Terminals
+Exec=/home/desenv/Local/bin/goliveTerms.sh
+OnlyShowIn=Unity;
+
+[Desktop Action Linode Terminals]
+Name=Linode-Terminals
+Exec=/home/desenv/Local/bin/linodeTerms.sh
+OnlyShowIn=Unity;
