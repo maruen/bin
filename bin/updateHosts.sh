@@ -6,8 +6,10 @@ then
     exit 1
 fi
 
+ATSMS_SERVER=96.126.114.91
+ATSMS_USER=root
 CUR_DIR=`pwd`
-HOSTS_FILE=`scp root@96.126.114.91:"/etc/hosts /etc/hosts.ipv6"  .`
+HOSTS_FILE=`scp ${ATSMS_USER}@${ATSMS_SERVER}:"/etc/hosts /etc/hosts.ipv6"  ${CUR_DIR}`
 HOSTS=`sed -rn '/([0-9]{1,3}\.){3}[0-9]{1,3}/p' hosts`
 CUR_IP=`curl --silent ifconfig.me`
 HOSTS_UPDATED=`cat hosts.ipv6 > hosts`
@@ -41,7 +43,7 @@ NOW=$(date +"%d/%m/%Y %T")
 if [ "${IP_CHANGED}" == "1" ]  && [ "${CUR_IP}" != "" ];
 then
 	echo "${NOW}: The IP of $1 has changed from ${PREVIOUS_IP} to ${CUR_IP}, uploading the new hosts file to root@96.126.114.91:/etc/hosts"
-	REPLACE_HOSTS=`scp ${CUR_DIR}/hosts root@96.126.114.91:/etc/hosts`
+	REPLACE_HOSTS=`scp ${CUR_DIR}/hosts ${ATSMS_USER}@${ATSMS_SERVER}:/etc/hosts`
 else
 	echo "${NOW}: There was no changing of IP, nothing done!"	
 fi

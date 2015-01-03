@@ -2,18 +2,18 @@
 
 if [ "$#" -ne 1 ]
 then
-  echo "Illegal number of parameters"
+  echo "Illegal number of parameters, testVIVODongles <MESSAGE>"
   exit 1
 fi
 
-python sendsms.py VIVO-01 +5511984388499 "$1"
-python sendsms.py VIVO-02 +5511984388499 "$1"
-python sendsms.py VIVO-03 +5511984388499 "$1"
-python sendsms.py VIVO-04 +5511984388499 "$1"
-python sendsms.py VIVO-05 +5511984388499 "$1"
-python sendsms.py VIVO-06 +5511984388499 "$1"
-python sendsms.py VIVO-07 +5511984388499 "$1"
-python sendsms.py VIVO-08 +5511984388499 "$1"
-python sendsms.py VIVO-09 +5511984388499 "$1"
-python sendsms.py VIVO-10 +5511984388499 "$1"
-#ssh atsms@186.223.215.251 -p2224  "sendsms.py VIVO-10 +5511984388499 $1"
+RESULT1=`python sendsms.py VIVO-01 +5511984388499 "$1"` 
+RESULT2=`python sendsms.py VIVO-02 +5511984388499 "$1"`
+RESULT3=`python sendsms.py VIVO-03 +5511984388499 "$1"` 
+RESULT4=`python sendsms.py VIVO-04 +5511984388499 "$1"`
+RESULT5=`python sendsms.py VIVO-05 +5511984388499 "$1"`
+
+echo "Testing VIVO-01  : $RESULT1"  
+echo "Testing VIVO-02  : $RESULT2"  
+echo "Testing VIVO-03  : $RESULT3"  
+echo "Testing VIVO-04  : $RESULT4" 
+echo "Testing VIVO-05  : $RESULT5"
