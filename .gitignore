@@ -8,4 +8,6 @@ eclipse
 iksemel-1.4
 libpri-1.4.14
 playframework
-
+python-axolotl-curve25519
+python-axolotl
+yowsup
